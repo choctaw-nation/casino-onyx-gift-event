@@ -1,6 +1,6 @@
 {
 	"name": "choctaw-casino-onyx-elite",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A landing page for Choctaw Casino Onyx Elite announcements",
 	"browserslist": "> 0.5%, last 2 versions, not dead",
 	"scripts": {
