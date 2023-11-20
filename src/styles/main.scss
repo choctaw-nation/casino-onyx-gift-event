@@ -8,11 +8,9 @@
 // Import Components
 @use "./components/hr";
 @use "./components/buttons";
-@use "./components/choctaw-logo";
 
 // Import Sections
+@use "./sections/topbar";
 @use "./sections/header";
-@use "./sections/hero";
-@use "./sections/overview";
-@use "./sections/giveaway";
+@use "./sections/image-grid";
 @use "./sections/final-cta";

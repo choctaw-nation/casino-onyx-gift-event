@@ -1,8 +1,0 @@
-@use "../abstracts/mixins" as m;
-@use "./abstract";
-
-.overview {
-  @extend %section;
-  background-image: url("../img/bg/grey-shine.jpg?as=webp");
-  min-height: 700px;
-}

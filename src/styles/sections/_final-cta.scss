@@ -1,26 +1,11 @@
-@use "../abstracts/mixins" as m;
-@use "./abstract";
-
-.cta {
-  @extend %section;
-
-  background-image: url("../img/bg/grey-shine-feathers.jpg?as=webp");
-  min-height: 700px;
-
-  &__svg {
-    --mx: 50px;
-    margin-top: var(--mx);
-    margin-bottom: var(--mx);
-    width: 80%;
-
-    @include m.media-breakpoint-up(sm) {
-      --mx: 75px;
-      width: 75%;
+.final-cta {
+  &__logos {
+    &--onyx {
+      width: 30rem;
     }
 
-    @include m.media-breakpoint-up(lg) {
-      --mx: 125px;
-      width: 40%;
+    &--choctaw {
+      width: 25rem;
     }
   }
 }

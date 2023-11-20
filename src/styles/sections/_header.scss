@@ -3,24 +3,17 @@
 
 .header {
   @extend %section;
-  background-image: url("../img/bg/header-bg.png?as=webp");
 
-  .row {
-    min-height: 400px;
-
-    @include m.media-breakpoint-up(lg) {
-      min-height: 700px;
-    }
+  .logo--black {
+    max-width: 54rem;
+    width: 60vw;
+    max-height: 23rem;
   }
 
-  &__img {
-    &#onyx-renewal {
-      width: 80%;
-      margin: 6.25rem auto;
-
-      @include m.media-breakpoint-up(lg) {
-        width: 60%;
-      }
-    }
+  &__image {
+    max-height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
