@@ -8,3 +8,8 @@
 section {
   @extend %section;
 }
+
+.contaier,
+.container-fluid {
+  --bs-gutter-x: 3rem;
+}
