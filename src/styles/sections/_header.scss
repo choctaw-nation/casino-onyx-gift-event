@@ -11,10 +11,19 @@
   }
 
   &__image {
-    max-height: 30rem;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    max-height: 15rem;
+    object-position: center center;
+
+    @include m.media-breakpoint-up(md) {
+      max-height: 30rem;
+    }
+
+    @include m.media-breakpoint-up(xxl) {
+      object-position: center 45%;
+      max-height: 40rem;
+    }
   }
 
   &__subheadline {
