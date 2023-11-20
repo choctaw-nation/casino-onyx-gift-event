@@ -13,7 +13,7 @@
   &__image {
     width: 100%;
     object-fit: cover;
-    max-height: 15rem;
+    min-height: 25rem;
     object-position: center center;
 
     @include m.media-breakpoint-up(md) {
