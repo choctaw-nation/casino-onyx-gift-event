@@ -1,0 +1,27 @@
+@use "./abstracts/variables" as v;
+
+:root {
+	--font-gill-sans: #{v.$font-gill-sans};
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	box-sizing: border-box;
+	overflow-x: hidden;
+	background-color: black;
+}
+
+.text-underline {
+	text-decoration: underline;
+}

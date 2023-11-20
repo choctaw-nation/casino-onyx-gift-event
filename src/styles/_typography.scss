@@ -1,0 +1,45 @@
+@use "./abstracts/mixins" as m;
+
+body {
+	font-family: var(--font-gill-sans);
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+%headings {
+	font-weight: 600;
+	line-height: 50px;
+	margin: 50px 0;
+}
+
+h2 {
+	@extend %headings;
+	font-size: 1.5em;
+
+	@include m.media-breakpoint-down(lg) {
+		font-size: 1em;
+		margin: 0;
+	}
+}
+
+h3 {
+	@extend %headings;
+	font-size: 1.25em;
+
+	@include m.media-breakpoint-down(lg) {
+		font-size: 0.75em;
+		margin: 0;
+	}
+}
+
+p {
+	line-height: 45px;
+	margin: 50px 0;
+
+	@include m.media-breakpoint-down(lg) {
+		font-size: 0.8em;
+	}
+}

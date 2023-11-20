@@ -1,0 +1,20 @@
+@use "./variables";
+@use "./breakpoints" as m;
+@forward "./breakpoints";
+
+///////////////////
+// Gradients /////
+/////////////////
+
+@mixin displayFlex(
+  $direction: row,
+  $main: flex-start,
+  $cross: flex-start,
+  $wrap: wrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $main;
+  align-items: $cross;
+}
