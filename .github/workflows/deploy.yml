@@ -3,6 +3,8 @@ name: Bundle with Bun
 on:
   push:
     branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -15,18 +17,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - run: |
-          npm install
-          npx parcel build src/index.html --public-url /casino-onyx-elite --dist-dir ./build
 
+      - name: Use Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
       - name: Build
         run: |
           bun install
-          bunx parcel build src/index.html --public-url /casino-onyx-elite --dist-dir ./build
+          bunx parcel build --public-url /casino-onyx-elite --dist-dir ./build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v1
