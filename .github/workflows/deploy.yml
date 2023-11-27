@@ -14,12 +14,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Bun
-        uses: oven-sh/setup-bun@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: 18
+      - run: |
+          npm install
+          npx parcel build src/index.html --public-url /casino-onyx-elite --dist-dir ./build
+
 
       - name: Build
         run: |
