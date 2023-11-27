@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: |
           bun install
-          bunx parcel build --public-url /casino-onyx-elite --dist-dir ./build
+          bunx parcel build src/index.html --public-url /casino-onyx-elite --dist-dir ./build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v1
