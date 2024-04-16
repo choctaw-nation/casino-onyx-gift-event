@@ -1,8 +1,11 @@
 @use "./abstracts/mixins" as m;
 
 body {
-  letter-spacing: 5px;
   text-wrap: pretty;
+  letter-spacing: 5px;
+  :is(.dates *) {
+    letter-spacing: initial;
+  }
 }
 
 %headings {
