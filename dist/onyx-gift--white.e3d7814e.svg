@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 619.55 206.23"><defs><style>.cls-1 {
+  letter-spacing: .88em;
+}
+
+.cls-2 {
+  letter-spacing: .87em;
+}
+
+.cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+  letter-spacing: .88em;
+}
+
+.cls-8 {
+  letter-spacing: .87em;
+}
+
+.cls-9 {
+  letter-spacing: .89em;
+}
+
+.cls-10 {
+  fill: url("#linear-gradient");
+}
+
+.cls-10, .cls-11, .cls-12, .cls-13 {
+  stroke-width: 0;
+}
+
+.cls-14 {
+  fill: #fff;
+  font-family: GillSansNova-Medium, Gill Sans Nova;
+  font-size: 46.66px;
+  font-weight: 500;
+}
+
+.cls-11 {
+  fill: url("#linear-gradient-4");
+}
+
+.cls-12 {
+  fill: url("#linear-gradient-2");
+}
+
+.cls-13 {
+  fill: url("#linear-gradient-3");
+}
+</style><linearGradient id="linear-gradient" x1="133" y1="5.94" x2="133" y2="90.08" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"></stop><stop offset="1" stop-color="#afafb0"></stop></linearGradient><linearGradient id="linear-gradient-2" x1="262.83" y1="5.94" x2="262.83" y2="90.08" xlink:href="#linear-gradient"></linearGradient><linearGradient id="linear-gradient-3" x1="380.48" y1="5.94" x2="380.48" y2="90.08" xlink:href="#linear-gradient"></linearGradient><linearGradient id="linear-gradient-4" x1="493.05" y1="5.94" x2="493.05" y2="90.08" xlink:href="#linear-gradient"></linearGradient></defs><g id="Layer_1-2"><path class="cls-10" d="M133.01,85.66c-36.16,0-55.12-18.96-55.12-42.83S96.84,0,133.01,0s55.12,18.96,55.12,42.83-18.96,42.83-55.12,42.83M133.01,71.62c25.39,0,38.97-12.76,38.97-28.79s-13.58-28.79-38.97-28.79-38.97,12.76-38.97,28.79,13.57,28.79,38.97,28.79"></path><polygon class="cls-12" points="295.65 68.81 298.34 68.81 298.34 1.87 314.5 1.87 314.5 83.79 288.16 83.79 230.24 15.91 227.31 15.91 227.31 83.79 211.16 83.79 211.16 1.87 238.78 1.87 295.65 68.81"></polygon><polygon class="cls-13" points="388.56 83.79 372.4 83.79 372.4 57.11 327.12 1.87 347.01 1.87 380.6 42.95 414.18 1.87 433.84 1.87 388.56 57.11 388.56 83.79"></polygon><polygon class="cls-11" points="492.93 51.25 461.22 83.79 440.27 83.79 482.4 40.61 444.72 1.87 465.9 1.87 493.05 29.72 520.2 1.87 541.14 1.87 503.46 40.49 545.82 83.79 524.64 83.79 492.93 51.25"></polygon><text class="cls-14" transform="translate(0 194.57)"><tspan class="cls-3" x="0" y="0">G</tspan><tspan class="cls-6" x="75.44" y="0">I</tspan><tspan class="cls-9" x="128.06" y="0">F</tspan><tspan class="cls-5" x="191.49" y="0">T </tspan><tspan class="cls-7" x="314.77" y="0">E</tspan><tspan class="cls-1" x="380.35" y="0">V</tspan><tspan class="cls-2" x="449.43" y="0">E</tspan><tspan class="cls-8" x="514.37" y="0">N</tspan><tspan class="cls-4" x="591.37" y="0">T</tspan></text></g></svg>

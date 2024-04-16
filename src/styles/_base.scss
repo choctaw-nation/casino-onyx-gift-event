@@ -1,15 +1,18 @@
 @use "./abstracts/variables" as v;
-@use "./sections/abstract";
 
 :root {
   --font-gill-sans: #{v.$font-gill-sans};
+  --font-serif: #{v.$font-serif};
 }
 
-section {
-  @extend %section;
+.left-0 {
+  left: 0;
 }
 
-.contaier,
-.container-fluid {
-  --bs-gutter-x: 3rem;
+.font-body {
+  font-family: var(--font-gill-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
