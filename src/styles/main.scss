@@ -5,12 +5,14 @@
 @use "./base";
 @use "./typography";
 
-// Import Components
-@use "./components/hr";
-@use "./components/buttons";
+#hero {
+  background-image: linear-gradient(
+    to right,
+    transparent 20%,
+    rgba(black, 0.9)
+  );
+}
 
-// Import Sections
-@use "./sections/topbar";
-@use "./sections/header";
-@use "./sections/image-grid";
-@use "./sections/final-cta";
+#choctaw-c {
+  transform: translateX(-10%);
+}
