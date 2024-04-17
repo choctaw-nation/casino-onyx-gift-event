@@ -105,23 +105,32 @@
             </p>
             <hr class="border-black opacity-100 w-25" />
             <div class="dates">
-              <ul
-                class="list-unstyled font-serif text-center text-lg-end d-flex flex-column"
-              >
-                <li>
-                  <span>Fridays, May 24 & 31</span> |
-                  <span class="font-body">7PM</span> to
-                  <span class="font-body">11PM</span>
+              <ul class="list-unstyled font-serif details-grid">
+                <li class="details-grid__cell">
+                  <span class="details-grid__date">Fridays, May 24 & 31</span>
+                  <span class="details-grid__separator">|</span>
+                  <span class="details-grid__times">
+                    <span class="font-body ms-auto">7PM</span> to
+                    <span class="font-body">11PM</span>
+                  </span>
                 </li>
-                <li>
-                  <span>Saturdays, May 25 & June 1</span> |
-                  <span class="font-body">2PM</span> to
-                  <span class="font-body">1PM</span>
+                <li class="details-grid__cell">
+                  <span class="details-grid__date"
+                    >Saturdays, May 25 & June 1</span
+                  ><span class="details-grid__separator">|</span>
+                  <span class="details-grid__times"
+                    ><span class="font-body ms-auto">2PM</span> to
+                    <span class="font-body">1PM</span></span
+                  >
                 </li>
-                <li>
-                  <span>Sundays, May 26 & June 2</span> |
-                  <span class="font-body">11AM</span> to
-                  <span class="font-body">7PM</span>
+                <li class="details-grid__cell">
+                  <span class="details-grid__date"
+                    >Sundays, May 26 & June 2</span
+                  ><span class="details-grid__separator">|</span>
+                  <span class="details-grid__times"
+                    ><span class="font-body ms-auto">11AM</span> to
+                    <span class="font-body">7PM</span></span
+                  >
                 </li>
               </ul>
             </div>
@@ -134,8 +143,9 @@
       alt="A Cadillac SUV is parked in front of some doors. Above it is the word 'Casino' and some diagonal light fixtures"
       loading="lazy"
       class="w-100 h-100"
+      id="banner-img"
     />
-    <section class="text-white position-relative py-5">
+    <section class="text-white position-relative py-5" id="final-cta">
       <img
         src="./assets/eblast/final-bg.png?as=webp"
         alt=""

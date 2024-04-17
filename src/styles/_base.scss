@@ -1,8 +1,8 @@
-@use "./abstracts/variables" as v;
-
 :root {
-  --font-gill-sans: #{v.$font-gill-sans};
-  --font-serif: #{v.$font-serif};
+  --font-gill-sans: gill-sans-nova, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: grad, serif;
 }
 
 .left-0 {

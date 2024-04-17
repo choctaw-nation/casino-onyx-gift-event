@@ -16,3 +16,30 @@
 #choctaw-c {
   transform: translateX(-10%);
 }
+
+#details {
+  .details-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(3, 1fr);
+
+    &__cell {
+      display: contents;
+    }
+
+    &__date {
+      padding-inline: 1rem;
+      text-align: end;
+    }
+
+    &__times {
+      text-align: end;
+      padding-inline: 1rem;
+    }
+  }
+}
+
+#final-cta {
+  margin-top: -1rem;
+  z-index: 2;
+}
