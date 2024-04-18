@@ -5,7 +5,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url /uploads/onyx-elite"
+    "build": "parcel build src/index.html --public-url /uploads/onyx-gift-event"
   },
   "author": "Choctaw Nation of Oklahoma",
   "license": "ISC",
