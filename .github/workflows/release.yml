@@ -40,7 +40,7 @@ jobs:
       - name: Download Plugin
         uses: actions/download-artifact@main
         with:
-          name: dist
+          name: site
           path: .
 
       - name: Get version
