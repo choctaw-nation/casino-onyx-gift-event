@@ -26,9 +26,8 @@ jobs:
           bun install
           bun run build
 
-      - name: Upload Pages Artifact
+      - name: Upload Artifact
         uses: actions/upload-artifact@main
-        id: site
         with:
           path: "./dist/"
 
@@ -39,7 +38,7 @@ jobs:
       - name: Download Plugin
         uses: actions/download-artifact@main
         with:
-          name: site
+          name: artifact
           path: .
 
       - name: Get version
