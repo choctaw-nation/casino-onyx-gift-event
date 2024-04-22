@@ -5,6 +5,10 @@
 @use "./base";
 @use "./typography";
 
+.header-logo {
+  scale: 2;
+}
+
 #hero {
   background-image: linear-gradient(
     to right,
