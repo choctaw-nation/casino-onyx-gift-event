@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo-choctaw-casino-and-resorts-white-horizontal.svg';
+import giftLogo from '../assets/onyx-gift--white.svg';
+import bg from '../assets/intro-bg.png';
+---
+
+<header class='position-relative overflow-y-hidden py-5'>
+    <Image
+        src={bg}
+        alt={''}
+        loading='eager'
+        fetchpriority={'high'}
+        aria-hidden={true}
+        class='position-absolute w-100 h-100 top-0 z-n1 object-fit-cover start-0'
+    />
+
+    <div class='container position-relative z-1 py-5 my-5'>
+        <div class='row justify-content-center'>
+            <div
+                class='col-10 col-lg-6 d-flex flex-column justify-content-center'>
+                <Image
+                    src={giftLogo}
+                    loading='eager'
+                    fetchpriority={'high'}
+                    alt='Onyx gift event'
+                    class='w-100 h-auto object-fit-cover'
+                />
+                <Image
+                    src={logo}
+                    loading='eager'
+                    fetchpriority={'high'}
+                    alt='Choctaw Casinos & Resorts'
+                    class='object-fit-contain my-5 w-75 h-auto mx-auto'
+                />
+            </div>
+        </div>
+    </div>
+</header>

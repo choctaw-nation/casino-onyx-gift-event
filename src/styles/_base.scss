@@ -1,18 +1,28 @@
 :root {
-  --font-gill-sans: gill-sans-nova, "Helvetica Neue", "Noto Sans",
-    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: grad, serif;
+    --fs-xs: clamp(0.89rem, 1.035294vi + 0.63rem, 1.33rem);
+    --fs-base: clamp(1rem, 1.176471vi + 0.71rem, 1.25rem);
+    --fs-root: 1rem;
+    --font-serif: grad, serif;
 }
 
-.left-0 {
-  left: 0;
+html {
+    text-wrap: pretty;
 }
 
-.font-body {
-  font-family: var(--font-gill-sans);
+body {
+    font-size: var(--fs-base);
 }
 
-.font-serif {
-  font-family: var(--font-serif);
+p {
+    margin-bottom: 0;
+    margin-block-end: 0;
+}
+
+$headings: h1, h2, h3, h4, h5, h6;
+@each $heading in $headings {
+    #{$heading},
+    .#{$heading} {
+        margin-bottom: 0;
+        margin-block-end: 0;
+    }
 }

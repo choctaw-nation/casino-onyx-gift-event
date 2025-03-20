@@ -1,22 +1,33 @@
+@use 'sass:map';
+
 // Required
-@import "bootstrap/scss/functions";
-
-$primary: #334041;
-$link-decoration: none;
-$border-width: 2px;
-
-$font-family-sans-serif: gill-sans-nova, "Helvetica Neue", "Noto Sans",
-  "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol", "Noto Color Emoji";
-
-$font-size-root: 62.5%;
-$font-size-base: 1.6rem;
+@import 'bootstrap/scss/functions';
+// ================================================
 
 /**
-* Minor Third Type Scale
-* @see https://typescale.com/
+* Typography
 */
 
+$font-family-sans-serif:
+    gill-sans-nova,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    'Noto Sans',
+    'Liberation Sans',
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+$line-height-lg: 3;
+
+$headings-font-weight: 500;
+$font-size-base: 1rem;
 $h1-font-size: $font-size-base * 2.986;
 $h2-font-size: $font-size-base * 2.488;
 $h3-font-size: $font-size-base * 2.074;
@@ -24,62 +35,142 @@ $h4-font-size: $font-size-base * 1.728;
 $h5-font-size: $font-size-base * 1.44;
 $h6-font-size: $font-size-base * 1.2;
 
-$headings-font-weight: 600;
-$headings-font-family: $font-family-sans-serif;
+// $h1-font-size: clamp(2.03rem, 2.376471vi + 1.44rem, 3.04rem);
+// $h2-font-size: clamp(1.8rem, 2.117647vi + 1.27rem, 2.7rem);
+// $h3-font-size: clamp(1.6rem, 1.882353vi + 1.13rem, 2.4rem);
+// $h4-font-size: clamp(1.42rem, 1.694118vi + 1rem, 2.14rem);
+// $h5-font-size: clamp(1.27rem, 1.482353vi + 0.9rem, 1.9rem);
+// $h6-font-size: clamp(1.13rem, 1.317647vi + 0.8rem, 1.69rem);
+
+// $font-sizes: (
+//     1: $h1-font-size,
+//     2: $h2-font-size,
+//     3: $h3-font-size,
+//     4: $h4-font-size,
+//     5: $h5-font-size,
+//     6: $h6-font-size,
+// );
 
 // ================================================
 
 /**
-* Spacing
+* Options / Misc
 */
-$grid-gutter-width: 2.4rem; // 24px
-$spacer: 1.6rem; // 16px
 
+$border-width: 2px;
 $enable-dark-mode: false;
+$enable-rounded: false;
 
-@import "bootstrap/scss/variables";
-// @import "bootstrap/scss/variables-dark";
-$grid-gutter-width: 0;
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
+@import 'bootstrap/scss/variables';
+
+// ================================================
+
+/**
+* Color Overrides
+*/
+
+$colors: map.remove(
+    $colors,
+    'blue',
+    'indigo',
+    'purple',
+    'pink',
+    'red',
+    'orange',
+    'yellow',
+    'green',
+    'teal',
+    'cyan'
+);
+
+$theme-colors: map.remove(
+    $theme-colors,
+    'primary',
+    'secondary',
+    'success',
+    'info',
+    'warning',
+    'danger'
+);
+
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/root';
+
+@import 'bootstrap/scss/utilities';
+
+// ================================================
+
+/**
+* Utilities Overrides
+*/
+
+$utilities: map.merge(
+    $utilities,
+    (
+        'float': null,
+        'translate-middle': null,
+        'border': null,
+        'border-top': null,
+        'border-end': null,
+        'border-bottom': null,
+        'border-start': null,
+        'border-color': null,
+        'subtle-border-color': null,
+        'border-width': null,
+        'border-opacity': null,
+        'viewport-height': null,
+        'min-viewport-height': null,
+        'order': null,
+        'negative-marin': null,
+        'negative-marin-x': null,
+        'negative-marin-y': null,
+        'negative-marin-top': null,
+        'negative-marin-end': null,
+        'negative-marin-bottom': null,
+        'negative-marin-start': null,
+        'font-family': null,
+        // 'font-size': (
+        //     rfs: false,
+        //     property: font-size,
+        //     class: fs,
+        //     values: $font-sizes,
+        // ),
+        'white-space': null,
+        'word-wrap': null,
+        'text-opacity': null,
+        'link-opacity': null,
+        'link-offset': null,
+        'link-underline': null,
+        'link-underline-opacity': null,
+        'subtle-background-color': null,
+        'gradient': null,
+        'user-select': null,
+        'pointer-events': null,
+        'rounded': null,
+        'rounded-top': null,
+        'rounded-end': null,
+        'rounded-bottom': null,
+        'rounded-start': null,
+        'visibility': null,
+        'letter-spacing': (
+            property: letter-spacing,
+            class: ls,
+            values: (
+                0: 0px,
+                1: 2px,
+                2: 4px,
+                3: 8px,
+            ),
+        ),
+    )
+);
 
 // Useful Bootstrap Utilities (Optional)
-@import "bootstrap/scss/bootstrap-reboot";
-@import "bootstrap/scss/bootstrap-grid";
-@import "bootstrap/scss/bootstrap-utilities";
+@import 'bootstrap/scss/bootstrap-reboot';
 // @import 'bootstrap/scss/buttons';
-// @import 'bootstrap/scss/transitions';
-// @import 'bootstrap/scss/close';
-// @import 'bootstrap/scss/offcanvas';
-// @import 'bootstrap/scss/containers';
-
-// Optional Bootstrap Modules (w/ Dependencies)
-// @import "bootstrap/scss/accordion";
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/card";
-// @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/code";
-// @import "bootstrap/scss/custom-forms";
-// @import "bootstrap/scss/dropdown";
-// @import "bootstrap/scss/forms";
-@import "bootstrap/scss/images";
-// @import "bootstrap/scss/jumbotron";
-// @import "bootstrap/scss/list-group";
-// @import "bootstrap/scss/media";
-// @import 'bootstrap/scss/modal'; // Requires transitions
-// @import 'bootstrap/scss/nav';
-// @import 'bootstrap/scss/navbar'; // Requires nav
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/placeholders";
-// @import "bootstrap/scss/popover";
-// @import "bootstrap/scss/print";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/spinners";
-// @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/toasts";
-// @import "bootstrap/scss/tooltip";
-@import "bootstrap/scss/type";
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/helpers';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/utilities/api';
