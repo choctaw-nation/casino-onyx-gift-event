@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import heroBG from '../assets/hero.jpg';
+import choctawCLogo from '../assets/choctaw-c.svg';
+---
+
+<style>
+    #hero {
+        background-image: linear-gradient(
+            to right,
+            transparent 20%,
+            rgba(black, 0.9)
+        );
+    }
+    #choctaw-c {
+        transform: translateX(-10%);
+    }
+</style>
+<section
+    class='py-5 position-relative'
+    id='hero'>
+    <Image
+        src={heroBG}
+        alt=''
+        loading='eager'
+        aria-hidden='true'
+        class='w-100 top-0 h-100 position-absolute z-n1 left-0 object-fit-cover hero-bg'
+    />
+
+    <div class='container my-5'>
+        <div class='row justify-content-center'>
+            <div
+                class='col-10 col-lg-6 offset-lg-7 text-center text-white d-flex flex-column align-items-center text-uppercase row-gap-4'>
+                <Image
+                    src={choctawCLogo}
+                    alt='Choctaw C logo'
+                    loading='lazy'
+                    class='w-25 h-25 object-fit-contain'
+                    id='choctaw-c'
+                />
+                <hr class='border-white opacity-100 w-25' />
+                <h2 class='fs-6 ls-3'>Elevate Your Expectations</h2>
+                <hr class='border-white opacity-100 w-25' />
+                <p class='text-white ls-2 fs-root text-uppercase'>
+                    YAKOKE <span class='fst-italic'>(THANK YOU)</span> FOR BEING
+                    AN ONYX ELITE GUEST WITH CHOCTAW CASINOS & RESORTS! AS ONE OF
+                    OUR MOST VALUED GUESTS, YOUR PATRONAGE AND LOYALTY TO OUR BUSINESS
+                    IS INVALUABLE TO OUR CONTINUED GROWTH AND SUCCESS. TO SHOW OUR
+                    APPRECIATION, WE INVITE YOU TO JOIN US FOR AN EXCLUSIVE GIFTING
+                    EVENT. YOU WILL HAVE THE OPTION TO SELECT FROM 50+ GIFTS, INCLUDING
+                    HOUSEWARES, SPA/FITNESS, ELECTRONICS, OUTDOOR ACCESSORIES AND
+                    JEWELRY.
+                </p>
+                <hr class='border-white opacity-100 w-25' />
+                <p class='fw-bold ls-3 mb-0'>Contact your host for details</p>
+            </div>
+        </div>
+    </div>
+</section>
