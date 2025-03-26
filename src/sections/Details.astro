@@ -2,83 +2,68 @@
 import { Image } from 'astro:assets';
 import bgImage from '../assets/details-bg.png';
 import imageRow from '../assets/image-row.jpg';
+import DatesGrid from '../components/DatesGrid.astro';
+import EliteDatesGrid from '../components/EliteDatesGrid.astro';
+const isElite = import.meta.env.IS_ELITE;
 ---
 
 <style>
-    .details-grid {
-        grid-template-columns: auto 1fr auto;
-        grid-template-rows: repeat(3, 1fr);
-    }
-    .details-grid-cell {
-        display: contents;
-    }
+	p.fw-medium {
+		line-height: 2;
+	}
 </style>
-<section class='position-relative py-5'>
-    <Image
-        src={bgImage}
-        alt=''
-        aria-hidden='true'
-        class='w-100 top-0 h-100 position-absolute z-n1 start-0 object-fit-cover details-bg'
-    />
-
-    <div class='container'>
-        <div class='row justify-content-center'>
-            <div class='col-10 col-lg-8'>
-                <h2
-                    class='text-black text-uppercase fs-5 my-5 text-center ls-3 fw-semibold'>
-                    We've pulled out all the stops
-                </h2>
-            </div>
-        </div>
-    </div>
-    <Image
-        src={imageRow}
-        alt='a row of images'
-        loading='lazy'
-        class='w-100 h-100 my-4'
-    />
-    <div class='container'>
-        <div class='row justify-content-center'>
-            <div class='col-12 d-flex flex-column align-items-center'>
-                <p
-                    class='text-black text-uppercase text-center ls-3 fw-light lh-lg fs-root'>
-                    ON YOUR SELECTED DATE, SIMPLY EARN ONE TIER CREDIT DURING
-                    TIMES LISTED AND VISIT ANY REWARDS CLUB KIOSK TO PRINT YOUR
-                    GIFT VOUCHER. REDEEM YOUR GIFT VOUCHER AT THE GRAND SUMMIT
-                    IN THE GRAND CASINO TO BEGIN YOUR SELECTION PROCESS.
-                </p>
-                <hr class='border-black opacity-100 w-25 my-5' />
-                <div class='dates'>
-                    <ul
-                        class='list-unstyled font-serif fst-italic details-grid mb-0 d-grid'>
-                        <li class='details-grid-cell'>
-                            <span class='px-3 text-end'>Fridays</span>
-                            <span>|</span>
-                            <span class='px-3 text-end'>
-                                <span class='font-body ms-auto'>7PM</span> to
-                                <span class='font-body'>11PM</span>
-                            </span>
-                        </li>
-                        <li class='details-grid-cell'>
-                            <span class='px-3 text-end'>Saturdays</span>
-                            <span>|</span>
-                            <span class='px-3 text-end'>
-                                <span class='font-body ms-auto'>2PM</span> to
-                                <span class='font-body'>1PM</span>
-                            </span>
-                        </li>
-                        <li class='details-grid-cell'>
-                            <span class='px-3 text-end'>Sundays</span>
-                            <span>|</span>
-                            <span class='px-3 text-end'>
-                                <span class='font-body ms-auto'>11AM</span>
-                                to
-                                <span class='font-body'>7PM</span>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class='position-relative py-5 content-spacer'>
+	<Image
+		src={bgImage}
+		alt=''
+		aria-hidden='true'
+		class='w-100 top-0 h-100 position-absolute z-n1 start-0 object-fit-cover details-bg'
+	/>
+	<div class='container'>
+		<div class='row justify-content-center'>
+			<div class='col-10 col-lg-8'>
+				<h2
+					class='text-black text-uppercase fs-5 my-3 text-center ls-3 fw-semibold'>
+					We've pulled out all the stops
+				</h2>
+			</div>
+		</div>
+	</div>
+	<Image
+		src={imageRow}
+		alt='a row of images'
+		loading='lazy'
+		class='w-100 h-100'
+	/>
+	<div class='container gx-5 gx-lg-4'>
+		<div class='row gx-5 gx-lg-4'>
+			<div class='col gx-5 gx-lg-4'>
+				<p
+					class='text-black text-uppercase text-center fw-medium ls-3 fs-root'>
+					ON YOUR SELECTED DATE, SIMPLY EARN ONE TIER CREDIT DURING
+					TIMES LISTED AND VISIT ANY REWARDS CLUB KIOSK TO PRINT YOUR
+					GIFT VOUCHER. REDEEM YOUR GIFT VOUCHER AT THE GRAND SUMMIT
+					IN THE GRAND CASINO TO BEGIN YOUR SELECTION PROCESS.
+				</p>
+			</div>
+		</div>
+		<hr class='border-black opacity-100 w-10 my-5 mx-auto' />
+		{
+			!isElite && (
+				<div class='row justify-content-center'>
+					<div class='col-auto text-center'>
+						<h3 class='fs-5 text-uppercase mb-2'>
+							Fridays &ndash; Sundays, May 2 &ndash; 4 or May 9
+							&ndash; 11
+						</h3>
+					</div>
+				</div>
+			)
+		}
+		<div class='row justify-content-center'>
+			<div class='col-auto'>
+				{isElite ? <EliteDatesGrid /> : <DatesGrid />}
+			</div>
+		</div>
+	</div>
 </section>

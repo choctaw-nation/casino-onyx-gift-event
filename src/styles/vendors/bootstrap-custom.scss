@@ -9,22 +9,22 @@
 */
 
 $font-family-sans-serif:
-    gill-sans-nova,
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    'Noto Sans',
-    'Liberation Sans',
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Noto Color Emoji';
+	gill-sans-nova,
+	system-ui,
+	-apple-system,
+	'Segoe UI',
+	Roboto,
+	'Helvetica Neue',
+	'Noto Sans',
+	'Liberation Sans',
+	Arial,
+	sans-serif,
+	'Apple Color Emoji',
+	'Segoe UI Emoji',
+	'Segoe UI Symbol',
+	'Noto Color Emoji';
 
-$line-height-lg: 3;
+$line-height-lg: 1.75;
 
 $headings-font-weight: 500;
 $font-size-base: 1rem;
@@ -70,27 +70,27 @@ $enable-rounded: false;
 */
 
 $colors: map.remove(
-    $colors,
-    'blue',
-    'indigo',
-    'purple',
-    'pink',
-    'red',
-    'orange',
-    'yellow',
-    'green',
-    'teal',
-    'cyan'
+	$colors,
+	'blue',
+	'indigo',
+	'purple',
+	'pink',
+	'red',
+	'orange',
+	'yellow',
+	'green',
+	'teal',
+	'cyan'
 );
 
 $theme-colors: map.remove(
-    $theme-colors,
-    'primary',
-    'secondary',
-    'success',
-    'info',
-    'warning',
-    'danger'
+	$theme-colors,
+	'primary',
+	'secondary',
+	'success',
+	'info',
+	'warning',
+	'danger'
 );
 
 @import 'bootstrap/scss/maps';
@@ -106,64 +106,64 @@ $theme-colors: map.remove(
 */
 
 $utilities: map.merge(
-    $utilities,
-    (
-        'float': null,
-        'translate-middle': null,
-        'border': null,
-        'border-top': null,
-        'border-end': null,
-        'border-bottom': null,
-        'border-start': null,
-        'border-color': null,
-        'subtle-border-color': null,
-        'border-width': null,
-        'border-opacity': null,
-        'viewport-height': null,
-        'min-viewport-height': null,
-        'order': null,
-        'negative-marin': null,
-        'negative-marin-x': null,
-        'negative-marin-y': null,
-        'negative-marin-top': null,
-        'negative-marin-end': null,
-        'negative-marin-bottom': null,
-        'negative-marin-start': null,
-        'font-family': null,
-        // 'font-size': (
-        //     rfs: false,
-        //     property: font-size,
-        //     class: fs,
-        //     values: $font-sizes,
-        // ),
-        'white-space': null,
-        'word-wrap': null,
-        'text-opacity': null,
-        'link-opacity': null,
-        'link-offset': null,
-        'link-underline': null,
-        'link-underline-opacity': null,
-        'subtle-background-color': null,
-        'gradient': null,
-        'user-select': null,
-        'pointer-events': null,
-        'rounded': null,
-        'rounded-top': null,
-        'rounded-end': null,
-        'rounded-bottom': null,
-        'rounded-start': null,
-        'visibility': null,
-        'letter-spacing': (
-            property: letter-spacing,
-            class: ls,
-            values: (
-                0: 0px,
-                1: 2px,
-                2: 4px,
-                3: 8px,
-            ),
-        ),
-    )
+	$utilities,
+	(
+		'float': null,
+		'translate-middle': null,
+		'border': null,
+		'border-top': null,
+		'border-end': null,
+		'border-bottom': null,
+		'border-start': null,
+		'border-color': null,
+		'subtle-border-color': null,
+		'border-width': null,
+		'border-opacity': null,
+		'viewport-height': null,
+		'min-viewport-height': null,
+		'order': null,
+		'negative-marin': null,
+		'negative-marin-x': null,
+		'negative-marin-y': null,
+		'negative-marin-top': null,
+		'negative-marin-end': null,
+		'negative-marin-bottom': null,
+		'negative-marin-start': null,
+		'font-family': null,
+		// 'font-size': (
+		//     rfs: false,
+		//     property: font-size,
+		//     class: fs,
+		//     values: $font-sizes,
+		// ),
+		'white-space': null,
+		'word-wrap': null,
+		'text-opacity': null,
+		'link-opacity': null,
+		'link-offset': null,
+		'link-underline': null,
+		'link-underline-opacity': null,
+		'subtle-background-color': null,
+		'gradient': null,
+		'user-select': null,
+		'pointer-events': null,
+		'rounded': null,
+		'rounded-top': null,
+		'rounded-end': null,
+		'rounded-bottom': null,
+		'rounded-start': null,
+		'visibility': null,
+		'letter-spacing': (
+			property: letter-spacing,
+			class: ls,
+			values: (
+				0: 0px,
+				1: 2px,
+				2: 4px,
+				3: 8px,
+			),
+		),
+	)
 );
 
 // Useful Bootstrap Utilities (Optional)

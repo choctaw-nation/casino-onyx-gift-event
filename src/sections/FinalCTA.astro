@@ -6,44 +6,44 @@ import blackOnyxGift from '../assets/onyx-gift--black.svg';
 ---
 
 <style>
-    #final-cta {
-        margin-top: -1rem;
-    }
+	#final-cta {
+		margin-top: -1rem;
+	}
 </style>
 <section
-    class='text-white position-relative py-5 z-2'
-    id='final-cta'>
-    <Image
-        src={finalBG}
-        alt=''
-        aria-hidden='true'
-        class='position-absolute object-fit-cover top-0 start-0 w-100 h-100'
-    />
-    <div class='container position-relative z-1 py-5'>
-        <div class='row justify-content-center'>
-            <div
-                class='col-10 col-lg-8 d-flex flex-column justify-content-center align-items-center texet-center text-uppercase text-black'>
-                <hr class='w-25 opacity-100 border-black' />
-                <h2 class='fs-5 my-4 text-center'>Reserve your Stay today</h2>
-                <hr class='w-25 opacity-100 border-black' />
-                <p class='fw-bold mb-5 text-center'>
-                    Contact your executive host today
-                </p>
-            </div>
-        </div>
-        <div class='row justify-content-center'>
-            <div class='col-6 d-flex flex-column'>
-                <Image
-                    src={blackOnyxGift}
-                    alt='Onyx Gift Event'
-                    class='object-fit-contain w-75 h-75 mx-auto my-5'
-                />
-                <Image
-                    src={blackLogo}
-                    alt='Choctaw Casinos & Resorts'
-                    class='my-5'
-                />
-            </div>
-        </div>
-    </div>
+	class='text-white position-relative z-1 py-5'
+	id='final-cta'>
+	<Image
+		src={finalBG}
+		alt=''
+		aria-hidden='true'
+		class='position-absolute object-fit-cover inset-0 h-100 w-100 z-n1'
+	/>
+	<div class='container position-relative z-1 py-5 content-spacer'>
+		<div class='row justify-content-center'>
+			<div
+				class='col-10 col-lg-8 d-flex flex-column justify-content-center align-items-center text-center text-uppercase text-black row-gap-5'>
+				<hr class='w-10 opacity-100 border-black' />
+				<h2 class='fs-5 text-center ls-2'>Reserve your Stay today</h2>
+				<hr class='w-10 opacity-100 border-black' />
+				<p class='fw-semibold h6 mb-0 text-center text-uppercase ls-1'>
+					please rsvp with your executive host
+				</p>
+			</div>
+		</div>
+		<div class='row justify-content-center mt-lg-5'>
+			<div class='col-6 content-spacer'>
+				<Image
+					src={blackOnyxGift}
+					alt='Onyx Gift Event'
+					class='object-fit-contain w-75 h-75 mx-auto'
+				/>
+				<Image
+					src={blackLogo}
+					alt='Choctaw Casinos & Resorts'
+					class='object-fit-contain w-100 mt-lg-5'
+				/>
+			</div>
+		</div>
+	</div>
 </section>
