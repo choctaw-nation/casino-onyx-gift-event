@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import bgImage from '../assets/details-bg.png';
-import imageRow from '../assets/image-row.jpg';
+import bgImage from '../assets/shared/details-bg.png';
+import imageRow from '../assets/shared/image-row.jpg';
 import DatesGrid from '../components/DatesGrid.astro';
 import EliteDatesGrid from '../components/EliteDatesGrid.astro';
 const isElite = import.meta.env.IS_ELITE;
@@ -48,21 +48,16 @@ const isElite = import.meta.env.IS_ELITE;
 			</div>
 		</div>
 		<hr class='border-black opacity-100 w-10 my-5 mx-auto' />
-		{
-			!isElite && (
-				<div class='row justify-content-center'>
-					<div class='col-auto text-center'>
-						<h3 class='fs-5 text-uppercase mb-2'>
-							Fridays &ndash; Sundays, May 2 &ndash; 4 or May 9
-							&ndash; 11
-						</h3>
-					</div>
-				</div>
-			)
-		}
+		<div class='row justify-content-center'>
+			<div class='col-auto text-center'>
+				<h3 class='fs-5 text-uppercase mb-2'>
+					Fridays &ndash; Sundays, May 2 &ndash; 4 or May 9 &ndash; 11
+				</h3>
+			</div>
+		</div>
 		<div class='row justify-content-center'>
 			<div class='col-auto'>
-				{isElite ? <EliteDatesGrid /> : <DatesGrid />}
+				<DatesGrid />
 			</div>
 		</div>
 	</div>

@@ -1,11 +1,18 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../assets/logo-choctaw-casino-and-resorts-white-horizontal.svg';
-import giftLogo from '../assets/onyx-gift--white.svg';
-import bg from '../assets/intro-bg.png';
+import logo from '../assets/shared/logo-choctaw-casino-and-resorts-white-horizontal.svg';
+import giftLogo from '../assets/base/onyx-gift--white.svg';
+import eliteLogo from '../assets/elite/onyx-elite-gift--white.svg';
+import bg from '../assets/shared/intro-bg.png';
+const isElite = import.meta.env.IS_ELITE;
 ---
 
-<header class='position-relative overflow-y-hidden py-5'>
+<style>
+	#elite-one {
+		scale: 1.75;
+	}
+</style>
+<header class='position-relative overflow-hidden py-5'>
 	<Image
 		src={bg}
 		alt={''}
@@ -18,13 +25,28 @@ import bg from '../assets/intro-bg.png';
 	<div class='container position-relative z-1 py-5 my-5'>
 		<div class='row justify-content-center'>
 			<div class='col-10 col-lg-6 content-spacer'>
-				<Image
-					src={giftLogo}
-					loading='eager'
-					fetchpriority={'high'}
-					alt='Onyx gift event'
-					class='w-100 h-auto object-fit-cover py-5'
-				/>
+				{
+					isElite ? (
+						<div class='ratio ratio-1x1'>
+							<Image
+								src={eliteLogo}
+								loading='eager'
+								fetchpriority={'high'}
+								alt='Onyx gift event'
+								class='w-100 h-auto object-fit-cover py-5'
+								id='elite-one'
+							/>
+						</div>
+					) : (
+						<Image
+							src={giftLogo}
+							loading='eager'
+							fetchpriority={'high'}
+							alt='Onyx gift event'
+							class='w-100 h-auto object-fit-cover py-5'
+						/>
+					)
+				}
 				<Image
 					src={logo}
 					loading='eager'

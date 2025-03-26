@@ -1,17 +1,22 @@
 ---
 import { Image } from 'astro:assets';
-import finalBG from '../assets/final-bg.png';
-import blackLogo from '../assets/logo-choctaw-casino-and-resorts-black-horizontal.svg';
-import blackOnyxGift from '../assets/onyx-gift--black.svg';
+import finalBG from '../assets/shared/final-bg.png';
+import blackLogo from '../assets/shared/logo-choctaw-casino-and-resorts-black-horizontal.svg';
+import blackOnyxGift from '../assets/base/onyx-gift--black.svg';
+import blackOnyxEliteGift from '../assets/elite/onyx-elite-gift--black.svg';
+const isElite = import.meta.env.IS_ELITE;
 ---
 
 <style>
 	#final-cta {
 		margin-top: -1rem;
 	}
+	#elite {
+		scale: 1.75;
+	}
 </style>
 <section
-	class='text-white position-relative z-1 py-5'
+	class='text-white position-relative z-1 py-5 overflow-hidden'
 	id='final-cta'>
 	<Image
 		src={finalBG}
@@ -33,11 +38,24 @@ import blackOnyxGift from '../assets/onyx-gift--black.svg';
 		</div>
 		<div class='row justify-content-center mt-lg-5'>
 			<div class='col-6 content-spacer'>
-				<Image
-					src={blackOnyxGift}
-					alt='Onyx Gift Event'
-					class='object-fit-contain w-75 h-75 mx-auto'
-				/>
+				{
+					isElite ? (
+						<div class='ratio ratio-1x1 overflow-hidden'>
+							<Image
+								src={blackOnyxEliteGift}
+								alt='Onyx Gift Event'
+								class='object-fit-contain'
+								id={'elite'}
+							/>
+						</div>
+					) : (
+						<Image
+							src={blackOnyxGift}
+							alt='Onyx Gift Event'
+							class='object-fit-contain w-75 h-75 mx-auto'
+						/>
+					)
+				}
 				<Image
 					src={blackLogo}
 					alt='Choctaw Casinos & Resorts'
