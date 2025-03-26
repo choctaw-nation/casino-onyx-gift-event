@@ -2,7 +2,7 @@
 
 A Landing page for annual Onyx & Onyx Elite Gift Event.
 
-[View Changelog](https://github.com/choctaw-nation/casino-onyx-gift-event/blobl/main/changelog.md)
+[View Changelog](https://github.com/choctaw-nation/casino-onyx-gift-event/blob/main/changelog.md)
 
 ## Dev Notes
 
