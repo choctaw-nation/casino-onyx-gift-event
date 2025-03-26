@@ -44,14 +44,13 @@ const isElite = import.meta.env.IS_ELITE;
 				<h2 class='fs-6 ls-3'>Elevate Your Expectations</h2>
 				<hr class='border-white opacity-100 w-10' />
 				<p class='text-white ls-2 fs-root text-uppercase lh-lg'>
-					YAKOKE <span class='fst-italic'>(THANK YOU)</span> FOR BEING
-					AN ONYX {isElite && 'Elite'} GUEST WITH CHOCTAW CASINOS & RESORTS!
-					AS ONE OF OUR MOST VALUED GUESTS, YOUR PATRONAGE AND LOYALTY
-					TO OUR BUSINESS IS INVALUABLE TO OUR CONTINUED GROWTH AND SUCCESS.
-					TO SHOW OUR APPRECIATION, WE INVITE YOU TO JOIN US FOR AN EXCLUSIVE
-					GIFTING EVENT. YOU WILL HAVE THE OPTION TO SELECT FROM 50+ GIFTS,
-					INCLUDING HOUSEWARES, SPA/FITNESS, ELECTRONICS, OUTDOOR ACCESSORIES
-					AND JEWELRY.
+					{
+						isElite ? (
+							<EliteHeroWelcomeMessage />
+						) : (
+							<HeroWelcomeMessage />
+						)
+					}
 				</p>
 				<hr class='border-white opacity-100 w-10' />
 				<p class='fw-bold ls-3 mb-0'>Contact your host for details</p>

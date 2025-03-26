@@ -41,23 +41,28 @@ const isElite = import.meta.env.IS_ELITE;
 				<p
 					class='text-black text-uppercase text-center fw-medium ls-3 fs-root'>
 					ON YOUR SELECTED DATE, SIMPLY EARN ONE TIER CREDIT DURING
-					TIMES LISTED AND VISIT ANY REWARDS CLUB KIOSK TO PRINT YOUR
-					GIFT VOUCHER. REDEEM YOUR GIFT VOUCHER AT THE GRAND SUMMIT
-					IN THE GRAND CASINO TO BEGIN YOUR SELECTION PROCESS.
+					THE TIMES LISTED AND VISIT ANY REWARDS CLUB KIOSK TO PRINT
+					YOUR GIFT VOUCHER. REDEEM YOUR GIFT VOUCHER AT THE GRAND
+					SUMMIT IN THE GRAND CASINO TO BEGIN YOUR SELECTION PROCESS.
 				</p>
 			</div>
 		</div>
 		<hr class='border-black opacity-100 w-10 my-5 mx-auto' />
 		<div class='row justify-content-center'>
-			<div class='col-auto text-center'>
-				<h3 class='fs-5 text-uppercase mb-2'>
-					Fridays &ndash; Sundays, May 2 &ndash; 4 or May 9 &ndash; 11
-				</h3>
-			</div>
+			{
+				!isElite && (
+					<div class='col-auto text-center'>
+						<h3 class='fs-5 text-uppercase mb-2'>
+							Fridays &ndash; Sundays, May 2 &ndash; 4 or May 9
+							&ndash; 11
+						</h3>
+					</div>
+				)
+			}
 		</div>
 		<div class='row justify-content-center'>
 			<div class='col-auto'>
-				<DatesGrid />
+				{isElite ? <EliteDatesGrid /> : <DatesGrid />}
 			</div>
 		</div>
 	</div>

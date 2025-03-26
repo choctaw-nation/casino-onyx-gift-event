@@ -10,9 +10,18 @@ const isElite = import.meta.env.IS_ELITE;
 <style>
 	#elite-one {
 		scale: 1.75;
+		max-width: 90vw;
+		margin-inline: auto;
 	}
 </style>
-<header class='position-relative overflow-hidden py-5'>
+<header
+	class:list={[
+		'position-relative overflow-hidden py-5',
+		{
+			'align-content-center': !isElite,
+		},
+	]}
+	style={!isElite ? 'height:95vh' : ''}>
 	<Image
 		src={bg}
 		alt={''}
