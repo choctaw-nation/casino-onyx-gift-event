@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import heroBG from '../assets/base/hero.jpg';
+import eliteBG from '../assets/elite/onyx-elite-gift.jpg';
 import choctawCLogo from '../assets/shared/choctaw-c.svg';
 import HeroWelcomeMessage from '../components/HeroWelcomeMessage.astro';
 import EliteHeroWelcomeMessage from '../components/EliteHeroWelcomeMessage.astro';
@@ -23,7 +24,7 @@ const isElite = import.meta.env.IS_ELITE;
 	class='py-5 position-relative'
 	id='hero'>
 	<Image
-		src={heroBG}
+		src={isElite ? eliteBG : heroBG}
 		alt=''
 		loading='eager'
 		aria-hidden='true'
