@@ -1,10 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import heroBG from '../assets/base/hero.jpg';
-import eliteBG from '../assets/elite/onyx-elite-gift.jpg';
+import eliteBG from '../assets/elite/hero.jpg';
 import choctawCLogo from '../assets/shared/choctaw-c.svg';
-import HeroWelcomeMessage from '../components/HeroWelcomeMessage.astro';
-import EliteHeroWelcomeMessage from '../components/EliteHeroWelcomeMessage.astro';
 const isElite = import.meta.env.IS_ELITE;
 ---
 
@@ -13,7 +11,7 @@ const isElite = import.meta.env.IS_ELITE;
 		background-image: linear-gradient(
 			to right,
 			transparent 20%,
-			rgba(black, 0.9)
+			rgba(0, 0, 0, 0.9)
 		);
 	}
 	#choctaw-c {
@@ -45,13 +43,11 @@ const isElite = import.meta.env.IS_ELITE;
 				<h2 class='fs-6 ls-3'>Elevate Your Expectations</h2>
 				<hr class='border-white opacity-100 w-10' />
 				<p class='text-white ls-2 fs-root text-uppercase lh-lg'>
-					{
-						isElite ? (
-							<EliteHeroWelcomeMessage />
-						) : (
-							<HeroWelcomeMessage />
-						)
-					}
+					We are delighted to extend an exclusive invitation to you as
+					our distinguished Onyx {isElite ? 'Elite' : ''} guest at the
+					upcoming annual gifting event. You're invited to select from
+					50+ gifts, including housewares, spa/fitness, electronics, outdoor
+					accessories, and jewelry.
 				</p>
 				<hr class='border-white opacity-100 w-10' />
 				<p class='fw-bold ls-3 mb-0'>Contact your host for details</p>
