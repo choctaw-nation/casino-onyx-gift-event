@@ -1,6 +1,6 @@
 {
 	"name": "choctaw-casino-onyx-gift-event",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "A landing page for Choctaw Casino Onyx Gift Event",
 	"browserslist": "> 0.5%, last 2 versions, not dead",
 	"scripts": {
@@ -15,11 +15,11 @@
 	"author": "Choctaw Nation of Oklahoma",
 	"license": "ISC",
 	"devDependencies": {
-		"@wordpress/prettier-config": "^4.20.0",
-		"sass-embedded": "^1.86.0"
+		"@wordpress/prettier-config": "^4.22.0",
+		"sass-embedded": "^1.87.0"
 	},
 	"dependencies": {
-		"astro": "^5.5.3",
-		"bootstrap": "^5.3.3"
+		"astro": "^5.7.4",
+		"bootstrap": "^5.3.5"
 	}
 }
