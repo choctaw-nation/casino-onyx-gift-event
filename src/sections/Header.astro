@@ -4,7 +4,12 @@ import logo from '../assets/shared/logo-choctaw-casino-and-resorts-white-horizon
 import giftLogo from '../assets/base/onyx-gift--white.svg';
 import eliteLogo from '../assets/elite/onyx-elite-gift--white.svg';
 import bg from '../assets/shared/intro-bg.png';
-const isElite = import.meta.env.IS_ELITE;
+
+export type Props = {
+	elite?: boolean;
+};
+const { elite } = Astro.props;
+const isElite = elite || import.meta.env.IS_ELITE;
 ---
 
 <style>

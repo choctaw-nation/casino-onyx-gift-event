@@ -1,0 +1,43 @@
+---
+const dates = [
+	{
+		day: 'Saturday, May 17',
+		startTime: '10AM',
+		endTime: '10PM',
+	},
+	{
+		day: 'Sunday, May 18',
+		startTime: '12PM',
+		endTime: '5PM',
+	},
+];
+---
+
+<style>
+	.details-grid {
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: repeat(3, 1fr);
+	}
+	.details-grid-cell {
+		display: contents;
+	}
+</style>
+<ul class='list-unstyled font-serif fst-italic details-grid mb-0 d-grid'>
+	{
+		dates.map(({ day, startTime, endTime }) => (
+			<li class='details-grid-cell'>
+				<span class='px-3 text-end'>{day}</span>
+				<span>|</span>
+				<span class='px-3 text-end'>
+					<span class='fw-medium fst-normal font-body ms-auto'>
+						{startTime}
+					</span>{' '}
+					to
+					<span class='fw-medium fst-normal font-body'>
+						{endTime}
+					</span>
+				</span>
+			</li>
+		))
+	}
+</ul>

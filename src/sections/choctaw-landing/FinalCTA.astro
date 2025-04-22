@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets';
-import finalBG from '../assets/shared/final-bg.png';
-import blackLogo from '../assets/shared/logo-choctaw-casino-and-resorts-black-horizontal.svg';
-import blackOnyxGift from '../assets/base/onyx-gift--black.svg';
-import blackOnyxEliteGift from '../assets/elite/onyx-elite-gift--black.svg';
+import finalBG from '../../assets/shared/final-bg.png';
+import ChoctawLandingLogo from '../../assets/choctaw-landing/ChoctawLandingLogo.astro';
+import blackOnyxGift from '../../assets/base/onyx-gift--black.svg';
+import blackOnyxEliteGift from '../../assets/elite/onyx-elite-gift--black.svg';
 
 export type Props = {
 	elite?: boolean;
@@ -61,11 +61,7 @@ const isElite = elite || import.meta.env.IS_ELITE;
 						/>
 					)
 				}
-				<Image
-					src={blackLogo}
-					alt='Choctaw Casinos & Resorts'
-					class='object-fit-contain w-100 mt-lg-5'
-				/>
+				<ChoctawLandingLogo />
 			</div>
 		</div>
 	</div>

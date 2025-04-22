@@ -4,11 +4,11 @@
 	"description": "A landing page for Choctaw Casino Onyx Gift Event",
 	"browserslist": "> 0.5%, last 2 versions, not dead",
 	"scripts": {
-		"dev": "astro dev",
-		"dev:elite": "IS_ELITE=true astro dev",
-		"build": "astro build",
-		"build:standard": "IS_ELITE=false astro build --base=/uploads/onyx-gift-event",
-		"build:elite": "IS_ELITE=true astro build --base=/uploads/onyx-elite-gift-event",
+		"dev": "IS_PREVIEW=true astro dev",
+		"build": "IS_PREVIEW=true astro build",
+		"build:durant": "astro build --base=/uploads/onyx-gift-event",
+		"build:cl": "astro build --base=/uploads/onyx-gift-event",
+		"build:pocola": "astro build --base=/uploads/onyx-gift-event",
 		"preview": "astro preview",
 		"astro": "astro"
 	},
