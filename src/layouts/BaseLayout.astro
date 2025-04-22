@@ -1,28 +1,33 @@
 ---
+import BackToHome from '../components/BackToHome.astro';
 const { title } = Astro.props;
+const isPreview = import.meta.env.IS_PREVIEW;
+const baseUrl = import.meta.env.BASE_URL;
+const isHome =
+	Astro.url.pathname === baseUrl || Astro.url.pathname === baseUrl + '/';
 ---
 
 <!doctype html>
 <html>
-    <head>
-        <meta charset='UTF-8' />
-        <title>{title}</title>
-        <meta
-            name='viewport'
-            content='initial-scale=1.0, width=device-width'
-        />
-        <link
-            preload
-            rel='stylesheet'
-            href='https://use.typekit.net/too7zqy.css'
-        />
-    </head>
+	<head>
+		<meta charset='UTF-8' />
+		<title>{title}</title>
+		<meta
+			name='viewport'
+			content='initial-scale=1.0, width=device-width'
+		/>
+		<link
+			preload
+			rel='stylesheet'
+			href='https://use.typekit.net/too7zqy.css'
+		/>
+	</head>
 
-    <body class='w-100 overflow-x-hidden'>
-        <slot />
-    </body>
+	<body class='w-100 overflow-x-hidden'>
+		<slot />
+	</body>
 </html>
 <style lang='scss' is:global>
-    @use '../styles/vendors/bootstrap-custom.scss';
-    @use '../styles/main.scss';
+	@use '../styles/vendors/bootstrap-custom.scss';
+	@use '../styles/main.scss';
 </style>

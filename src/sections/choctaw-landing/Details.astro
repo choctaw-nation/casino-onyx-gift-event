@@ -1,9 +1,8 @@
 ---
 import { Image } from 'astro:assets';
-import bgImage from '../assets/shared/details-bg.png';
-import imageRow from '../assets/shared/image-row.jpg';
-import DatesGrid from '../components/DatesGrid.astro';
-import EliteDatesGrid from '../components/EliteDatesGrid.astro';
+import bgImage from '../../assets/shared/details-bg.png';
+import imageRow from '../../assets/shared/image-row.jpg';
+import DatesGrid from '../../components/choctaw-landing/DatesGrid.astro';
 
 export type Props = {
 	elite?: boolean;
@@ -45,29 +44,17 @@ const isElite = elite || import.meta.env.IS_ELITE;
 			<div class='col gx-5 gx-lg-4'>
 				<p
 					class='text-black text-uppercase text-center fw-medium ls-3 fs-root'>
-					ON YOUR SELECTED DATE, SIMPLY EARN ONE TIER CREDIT DURING
-					THE TIMES LISTED AND VISIT ANY REWARDS CLUB KIOSK TO PRINT
-					YOUR GIFT VOUCHER. REDEEM YOUR GIFT VOUCHER AT THE GRAND
-					SUMMIT IN THE GRAND CASINO TO BEGIN YOUR SELECTION PROCESS.
+					On your selected date, simply earn one tier credit during
+					the times listed and visit any rewards club kiosk to print
+					your gift voucher. Redeem your gift voucher at the Oksak
+					room to begin your selection process.
 				</p>
 			</div>
 		</div>
 		<hr class='border-black opacity-100 w-10 my-5 mx-auto' />
 		<div class='row justify-content-center'>
-			{
-				!isElite && (
-					<div class='col-auto text-center'>
-						<h3 class='fs-5 text-uppercase mb-2'>
-							Fridays &ndash; Sundays, May 2 &ndash; 4 or May 9
-							&ndash; 11
-						</h3>
-					</div>
-				)
-			}
-		</div>
-		<div class='row justify-content-center'>
 			<div class='col-auto'>
-				{isElite ? <EliteDatesGrid /> : <DatesGrid />}
+				<DatesGrid />
 			</div>
 		</div>
 	</div>

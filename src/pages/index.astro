@@ -1,20 +1,99 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../sections/Header.astro';
-import Hero from '../sections/Hero.astro';
-import Details from '../sections/Details.astro';
-import BannerImage from '../sections/BannerImage.astro';
-import FinalCTA from '../sections/FinalCTA.astro';
-
-const pageTitle = import.meta.env.IS_ELITE
-	? 'Onyx Elite Gift Event'
-	: 'Onyx Gift Event';
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title={`${pageTitle} | Choctaw Casinos & Resorts`}>
-	<Header />
-	<Hero />
-	<Details />
-	<BannerImage />
-	<FinalCTA />
+<BaseLayout title={`Onyx Pages Preview Site | Choctaw Casinos & Resorts`}>
+	<div class='container my-5'>
+		<h1 class='mb-0 fw-bold'>Preview the ONYX Gift Event pages</h1>
+		<p class='lead'>
+			These are <span class='fst-italic fw-bold'>preview pages</span> for the
+			ONYX Gift Event.
+		</p>
+		<nav class='my-4 py-4'>
+			<ul
+				class='list-unstyled m-0 d-grid gap-3 justify-content-evenly align-content-center'>
+				{
+					[
+						{
+							location: 'Choctaw Landing',
+							links: [
+								{
+									title: 'Onyx Gift Event',
+									url: `${baseUrl}/choctaw-landing/onyx/`,
+								},
+								{
+									title: 'Onyx ELITE Gift Event',
+									url: `${baseUrl}/choctaw-landing/onyx-elite/`,
+								},
+							],
+						},
+						{
+							location: 'Durant',
+							links: [
+								{
+									title: 'Onyx Gift Event',
+									url: `${baseUrl}/durant/onyx/`,
+								},
+								{
+									title: 'Onyx ELITE Gift Event',
+									url: `${baseUrl}/durant/onyx-elite/`,
+								},
+							],
+						},
+						{
+							location: 'Pocola',
+							links: [
+								{
+									title: 'Onyx Gift Event',
+									url: `${baseUrl}/pocola/onyx/`,
+								},
+								{
+									title: 'Onyx ELITE Gift Event',
+									url: `${baseUrl}/pocola/onyx-elite/`,
+								},
+							],
+						},
+					].map(({ location, links }) => (
+						<li class='card p-4'>
+							<h2>{location}</h2>
+							<ul>
+								{links.map(({ title, url }) => (
+									<li class='position-relative'>
+										<a
+											class='text-light fs-5'
+											href={url}>
+											{title}
+										</a>
+									</li>
+								))}
+							</ul>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+	</div>
 </BaseLayout>
+<style>
+	body {
+		background-color: var(--bs-dark);
+		color: var(--bs-light);
+	}
+	.d-grid {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+	.card {
+		border: 2px solid var(--bs-light);
+		border-radius: 0.5rem;
+
+		li:has(a):hover {
+			background-color: rgba(255, 255, 255, 0.25);
+		}
+	}
+	a::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
+</style>

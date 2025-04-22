@@ -3,7 +3,12 @@ import { Image } from 'astro:assets';
 import heroBG from '../assets/base/hero.jpg';
 import eliteBG from '../assets/elite/hero.jpg';
 import choctawCLogo from '../assets/shared/choctaw-c.svg';
-const isElite = import.meta.env.IS_ELITE;
+
+export type Props = {
+	elite?: boolean;
+};
+const { elite } = Astro.props;
+const isElite = elite || import.meta.env.IS_ELITE;
 ---
 
 <style>

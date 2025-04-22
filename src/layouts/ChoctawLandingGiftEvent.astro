@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../sections/Header.astro';
+import Hero from '../sections/Hero.astro';
+import Details from '../sections/choctaw-landing/Details.astro';
+import FinalCTA from '../sections/choctaw-landing/FinalCTA.astro';
+
+import { Image } from 'astro:assets';
+import banner from '../assets/choctaw-landing/banner-image.png';
+
+export type Props = {
+	isElite: boolean;
+};
+const { isElite } = Astro.props;
+const title = isElite
+	? 'Onyx Elite Gift Event | Choctaw Landing Casino & Resort'
+	: 'Onyx Gift Event | Choctaw Landing Casino & Resort';
+---
+
+<BaseLayout title={title}>
+	<Header elite={isElite} />
+	<Hero elite={isElite} />
+	<Details elite={isElite} />
+	<Image
+		src={banner}
+		alt='The entrance to Choctaw Landing Casino & Resort'
+		loading='lazy'
+		class='w-100 h-100'
+		id='banner-img'
+	/>
+	<FinalCTA elite={isElite} />
+</BaseLayout>

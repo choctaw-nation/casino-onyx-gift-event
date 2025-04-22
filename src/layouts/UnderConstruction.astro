@@ -1,0 +1,22 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BackToHome from '../components/BackToHome.astro';
+
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<BaseLayout>
+	<div class='container my-5 text-center'>
+		<h1 class='display-2 fw-bold mb-0'>
+			This Page is Under Construction ⚠️
+		</h1>
+		<p class='fs-5 mb-3'>Check back later.</p>
+		<BackToHome />
+	</div>
+</BaseLayout>
+<style>
+	body {
+		background-color: var(--bs-dark);
+		color: var(--bs-light);
+	}
+</style>

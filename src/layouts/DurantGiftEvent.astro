@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../sections/Header.astro';
+import Hero from '../sections/Hero.astro';
+import Details from '../sections/Details.astro';
+import FinalCTA from '../sections/FinalCTA.astro';
+
+import { Image } from 'astro:assets';
+import banner from '../assets/shared/chevy-banner.jpg';
+
+export type Props = {
+	isElite: boolean;
+};
+const { isElite } = Astro.props;
+const title = isElite
+	? 'Onyx Elite Gift Event | Choctaw Casinos & Resorts'
+	: 'Onyx Gift Event | Choctaw Casinos & Resorts';
+---
+
+<BaseLayout title={title}>
+	<Header elite={isElite} />
+	<Hero elite={isElite} />
+	<Details elite={isElite} />
+	<Image
+		src={banner}
+		alt="A Cadillac SUV is parked in front of some doors. Above it is the word 'Casino' and some diagonal light fixtures"
+		loading='lazy'
+		class='w-100 h-100'
+		id='banner-img'
+	/>
+
+	<FinalCTA elite={isElite} />
+</BaseLayout>
