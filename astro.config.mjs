@@ -7,6 +7,6 @@ export default defineConfig({
 	base: 'casino-onyx-gift-event',
 	build: {
 		assets: 'dist',
-		format: 'directory',
+		format: 'file',
 	},
 });

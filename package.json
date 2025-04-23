@@ -7,7 +7,7 @@
 		"dev": "IS_PREVIEW=true astro dev",
 		"build": "IS_PREVIEW=true astro build",
 		"build:durant": "astro build --base=/uploads/onyx-gift-event",
-		"build:cl": "astro build --base=/uploads/onyx-gift-event",
+		"build:cl": "astro build --base=/onyx-assets/",
 		"build:pocola": "astro build --base=/uploads/onyx-gift-event",
 		"preview": "astro preview",
 		"astro": "astro"
