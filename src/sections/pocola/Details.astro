@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+import bgImage from '../../assets/shared/details-bg.png';
+import imageRow from '../../assets/shared/image-row.jpg';
+import DatesGrid from '../../components/pocola/DatesGrid.astro';
+
+export type Props = {
+	elite?: boolean;
+};
+const { elite } = Astro.props;
+const isElite = elite || import.meta.env.IS_ELITE;
+---
+
+<style>
+	p.fw-medium {
+		line-height: 2;
+	}
+</style>
+<section class='position-relative py-5 content-spacer'>
+	<Image
+		src={bgImage}
+		alt=''
+		aria-hidden='true'
+		class='w-100 top-0 h-100 position-absolute z-n1 start-0 object-fit-cover details-bg'
+	/>
+	<div class='container'>
+		<div class='row justify-content-center'>
+			<div class='col-10 col-lg-8'>
+				<h2
+					class='text-black text-uppercase fs-5 my-3 text-center ls-3 fw-semibold'>
+					We've pulled out all the stops
+				</h2>
+			</div>
+		</div>
+	</div>
+	<Image
+		src={imageRow}
+		alt='a row of images'
+		loading='lazy'
+		class='w-100 h-100'
+	/>
+	<div class='container gx-5 gx-lg-4'>
+		<div class='row gx-5 gx-lg-4'>
+			<div class='col gx-5 gx-lg-4'>
+				<p
+					class='text-black text-uppercase text-center fw-medium ls-3 fs-root'>
+					On your selected date, simply earn one tier credit during
+					the times listed and visit any rewards club kiosk to print
+					your gift voucher. Redeem your gift voucher at the Oksak
+					room to begin your selection process.
+				</p>
+			</div>
+		</div>
+		<hr class='border-black opacity-100 w-10 my-5 mx-auto' />
+		<div class='row justify-content-center'>
+			<div class='col-auto'>
+				<DatesGrid />
+			</div>
+		</div>
+	</div>
+</section>
