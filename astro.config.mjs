@@ -9,4 +9,5 @@ export default defineConfig({
 		assets: 'dist',
 		format: 'file',
 	},
+	trailingSlash: 'always',
 });
