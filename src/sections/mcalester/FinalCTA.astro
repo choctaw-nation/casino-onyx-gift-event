@@ -1,0 +1,68 @@
+---
+import { Image } from 'astro:assets';
+import finalBG from '../../assets/shared/final-bg.png';
+import Logo from '../../assets/mcalester/mcalester-logo.svg';
+import blackOnyxGift from '../../assets/base/onyx-gift--black.svg';
+import blackOnyxEliteGift from '../../assets/elite/onyx-elite-gift--black.svg';
+
+export type Props = {
+	elite?: boolean;
+};
+const { elite } = Astro.props;
+const isElite = elite || import.meta.env.IS_ELITE;
+---
+
+<style>
+	#final-cta {
+		margin-top: -1rem;
+	}
+	#elite {
+		scale: 1.75;
+	}
+</style>
+<section
+	class='text-white position-relative z-1 py-5 overflow-hidden'
+	id='final-cta'>
+	<Image
+		src={finalBG}
+		alt=''
+		aria-hidden='true'
+		class='position-absolute object-fit-cover inset-0 h-100 w-100 z-n1'
+	/>
+	<div class='container position-relative z-1 py-5 content-spacer'>
+		<div class='row justify-content-center'>
+			<div
+				class='col-10 col-lg-8 d-flex flex-column justify-content-center align-items-center text-center text-uppercase text-black row-gap-5'>
+				<hr class='w-10 opacity-100 border-black' />
+				<h2 class='fs-5 text-center ls-2'>Reserve your Stay today</h2>
+				<hr class='w-10 opacity-100 border-black' />
+				<p class='fw-semibold h6 mb-0 text-center text-uppercase ls-1'>
+					please rsvp with your executive host
+				</p>
+			</div>
+		</div>
+		<div class='row justify-content-center mt-lg-5'>
+			<div class='col-6 content-spacer'>
+				{
+					isElite ? (
+						<div class='ratio ratio-1x1 overflow-hidden'>
+							<Image
+								src={blackOnyxEliteGift}
+								alt='Onyx Gift Event'
+								class='object-fit-contain'
+								id={'elite'}
+							/>
+						</div>
+					) : (
+						<Image
+							src={blackOnyxGift}
+							alt='Onyx Gift Event'
+							class='object-fit-contain w-75 h-75 mx-auto'
+						/>
+					)
+				}
+				<Logo />
+			</div>
+		</div>
+	</div>
+</section>
