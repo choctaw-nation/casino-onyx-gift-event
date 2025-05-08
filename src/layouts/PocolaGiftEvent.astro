@@ -13,8 +13,8 @@ export type Props = {
 };
 const { isElite } = Astro.props;
 const title = isElite
-	? 'Onyx Elite Gift Event | Choctaw Landing Casino & Resort'
-	: 'Onyx Gift Event | Choctaw Landing Casino & Resort';
+	? 'Onyx Elite Gift Event | Choctaw Casino & Resort Pocola'
+	: 'Onyx Gift Event | Choctaw Casino & Resort Pocola';
 ---
 
 <BaseLayout title={title}>
@@ -23,7 +23,7 @@ const title = isElite
 	<Details elite={isElite} />
 	<Image
 		src={banner}
-		alt='The entrance to Choctaw Landing Casino & Resort'
+		alt='The entrance to Choctaw Casino & Resort in Pocola, Oklahoma'
 		loading='lazy'
 		class='w-100 h-100'
 		id='banner-img'
