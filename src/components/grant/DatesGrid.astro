@@ -3,7 +3,12 @@ const dates = [
 	{
 		day: 'Friday, June 13',
 		startTime: '5PM',
-		endTime: 'PM',
+		endTime: '10PM',
+	},
+	{
+		day: 'Saturday, June 14',
+		startTime: '12PM',
+		endTime: '8PM',
 	},
 ];
 ---
@@ -24,13 +29,8 @@ const dates = [
 				<span class='px-3 text-end'>{day}</span>
 				<span>|</span>
 				<span class='px-3 text-end'>
-					<span class='fw-medium fst-normal font-body ms-auto'>
-						{startTime}
-					</span>{' '}
-					to
-					<span class='fw-medium fst-normal font-body'>
-						{endTime}
-					</span>
+					<span class='fw-medium ms-auto'>{startTime}</span> to
+					<span class='fw-medium'>{endTime}</span>
 				</span>
 			</li>
 		))

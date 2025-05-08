@@ -10,6 +10,7 @@
 		"build:cl": "astro build --base=/onyx-assets/",
 		"build:pocola": "astro build --base=/uploads/pocola-onyx-gift-event",
 		"build:mcalester": "astro build --base=/uploads/mcalester-onyx-gift-event",
+		"build:grant": "astro build --base=/uploads/grant-onyx-gift-event",
 		"preview": "astro preview",
 		"astro": "astro"
 	},
